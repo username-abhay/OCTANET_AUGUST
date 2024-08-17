@@ -1,0 +1,88 @@
+/* univeral selector */
+*{ 
+    font-family: 'Courier New';
+}
+/* element selector comma can be used to select multiple elements*/
+h3,h1{
+    color: #b92b27;
+}
+/* id selector */
+#login{
+    background-color: white;
+}
+#signup{
+    background-color: #b92b27;
+    color: white;
+}
+/* class selector */
+.upvote{
+    background-color: #b92b27;
+    color: white;
+}
+/* decendent selector */
+p a{
+    text-decoration: none;
+    color: red;
+}
+/* sibiling combinator */
+p+h3{
+    text-decoration: none;
+}
+.upvote+button{
+    background-color: rgb(119, 160, 200);
+    color: white;
+}
+/* child combinator - can go only modify direct children grandchildren+ not included*/
+div>input{
+    background-color: rgb(238, 203, 203);
+}
+/* attribute selector */
+input[type="text"]{
+    color: black;
+}
+input[type="password"]{
+    color: green;
+}
+div[id="myid"]{
+    color: green;
+}
+#myid{
+    color: red;
+}
+/* pseudo class */
+/* hover */
+button:hover{ 
+    /* this wont change the login and signup button due to specificity because these were changed using id*/
+    background-color: black;
+}
+h3:hover{
+    text-decoration: underline;
+}
+/* active */
+button:active{
+    background-color: blue;
+}
+p:active{
+    color: blue;
+    font-weight: bold;
+}
+/* checked */
+input[type="radio"]:checked+label{
+    color: green;
+    font-weight: bold;
+
+}
+/* nth of type */
+.post:nth-of-type(1n){
+    background-color:yellow;
+}
+/* pseudo element */
+h1::first-letter{
+    color: green;
+}
+#myid::first-line{
+    color: green;
+}
+p::selection{
+    background-color: #e1555086;
+}
